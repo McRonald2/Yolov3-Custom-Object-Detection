@@ -1,0 +1,4 @@
+classes=1
+train=C:\Users\ronta\PycharmProjects\MultiOD\data\train.txt
+valid=C:\Users\ronta\PycharmProjects\MultiOD\data\val.txt
+names=C:\Users\ronta\PycharmProjects\MultiOD\data\SKU.names
