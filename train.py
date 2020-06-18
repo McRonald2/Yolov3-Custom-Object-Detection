@@ -466,5 +466,3 @@ if __name__ == '__main__':
 
             # Plot results
             # plot_evolution_results(hyp)
-
-train(hyp)
