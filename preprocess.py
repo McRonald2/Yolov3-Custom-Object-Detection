@@ -31,7 +31,7 @@ def _reformat_annotations(csv_reader, subset, PATH):
         img_name = img_file[:-4]
         x_cent, y_cent, w, h = _convert((width, height), (x1, x2, y1, y2))
 
-        with open(f'{PATH}/{subset}/{img_name}.txt', "a") as file:
+        with open(f'{PATH}/labels/{subset}/{img_name}.txt', "a") as file:
             file.write(f"0 {x_cent} {y_cent} {w} {h}\n")
 
 
@@ -44,11 +44,10 @@ def read_ref_annotations(PATH):
 
 def create_train_test_texts(PATH):
     for subset in ['train', 'test', 'val']:
-        # PATH = f'C:/Users/ronta/PycharmProjects/MultiOD/data/images/{subset}/'
 
         df = pd.read_csv(f'{PATH}/annotations_{subset}.csv', header=None,
                          usecols=[0])
         img_set = set(df[0])
         for img in img_set:
-            with open(f'{subset}.txt', 'a') as file:
-                file.write(PATH + f'/{subset}/' + f'{img}\n')
+            with open(f'{PATH}/{subset}.txt', 'a') as file:
+                file.write(PATH + f'/images/{subset}/' + f'{img}\n')
