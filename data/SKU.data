@@ -1,0 +1,4 @@
+classes=1
+train=/content/Yolov3-Custom-Object-Detection/data/train.txt
+valid=/content/Yolov3-Custom-Object-Detection/data/val.txt
+names=/content/Yolov3-Custom-Object-Detection/data/SKU.names
