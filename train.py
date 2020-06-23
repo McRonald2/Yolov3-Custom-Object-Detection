@@ -377,7 +377,7 @@ def train(hyp):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--epochs', type=int, default=1)  # 500200 batches at bs 8, 11k SKU images = 1 epochs
+    parser.add_argument('--epochs', type=int, default=4)  # 500200 batches at bs 8, 11k SKU images = 1 epochs
     parser.add_argument('--batch-size', type=int, default=8)  # effective bs = batch_size * accumulate = 8 * 4 = 32
     parser.add_argument('--cfg', type=str, default='cfg/yolov3-spp.cfg', help='*.cfg path')
     parser.add_argument('--data', type=str, default='/content/Yolov3-Custom-Object-Detection/data/SKU.data', help='*.data path')
